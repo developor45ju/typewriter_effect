@@ -10,13 +10,27 @@ body {
 }
 
 .typewriter_effect {
-    font-family: monospace;
     position: relative;
-    display: inline-block;
-    top: 100px;
+    font-family: monospace;
     font-style: 24px;
     color: #fff;
-    /* width: 0; */
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 5s steps(50, end) forwards;
+}
+
+.effect__container {
+    display: inline-block;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 .typewriter_effect::after {
