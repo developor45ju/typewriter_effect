@@ -1,0 +1,44 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    text-align: center;
+}
+
+.typewriter_effect {
+    font-family: monospace;
+    position: relative;
+    display: inline-block;
+    top: 100px;
+    font-style: 24px;
+    color: #fff;
+    /* width: 0; */
+}
+
+.typewriter_effect::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 3px;
+    right: -5px;
+    top: 0;
+    background-color: #fff;
+    animation: cursor-effect 0.8s infinite;
+}
+
+@keyframes cursor-effect {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
